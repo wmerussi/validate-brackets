@@ -11,3 +11,15 @@ Import and declare it in your `app.module.ts`.
 
 ### Usage example
 `<input validate-brackets (areBracketsInvalid)="isInvalid($event)" type="text">`
+
+### Result examples
+- Valid structures:
+  - ` ` (empty string)
+  - `(){}[]`
+  - `[{()}](){}`
+  - `10 / (1 + 2)`
+  
+- Invalid structures:
+  - `[]{()`
+  - `[{)]`
+  - `5 * (20 - 2`
